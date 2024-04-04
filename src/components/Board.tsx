@@ -3,17 +3,17 @@ import { useState } from "react";
 import Column from "./Column";
 import NewColumnForm from "./forms/NewColumnForm";
 
-const defoultcolumns = [
-    {id: '1', name: 'todo', index: 0},
-    {id: '2', name: 'in progress', index: 1},
-    {id: '3', name: 'done', index: 2},
-]
-
 export type CardType = {
     name: string;
     id: string | number;
     order: number;
 }
+
+const defoultcolumns = [
+    {id: '1', name: 'todo', index: 0},
+    {id: '2', name: 'in progress', index: 1},
+    {id: '3', name: 'done', index: 2},
+]
 
 const defoultCards = [
     {id: '123', name: 'Task 1', order: 0, columnId: '1'},
