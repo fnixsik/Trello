@@ -2,14 +2,18 @@ import { ReactSortable } from "react-sortablejs";
 import { CardType } from "./Board";
 
 type ColumnProps ={
+    id: string;
     name: string;
     cards: CardType[];
     setCards: (cards:any[]) => void;
 };
 
-const Columns = ({name, cards, setCards}: ColumnProps) => {
+const Columns = ({id,name, cards, setCards}: ColumnProps) => {
     console.log('name ', name)
     console.log('cards ', cards)
+    function setCardsForColumn(cards: CardType[],columnId: string){
+        console.log({cards, columnId})
+    }
     return ( 
         <div className="w-36 bg-white shadow-sm rounded-md p-2">
             <h3>
@@ -17,7 +21,7 @@ const Columns = ({name, cards, setCards}: ColumnProps) => {
             </h3>
             <ReactSortable 
                 list={cards} 
-                setList={setCards}
+                setList={cards => setCardsForColumn(cards, id)}
                 group="cards"
             >
                     {cards.map( card =>(

@@ -6,12 +6,7 @@ export type CreateFunctionColumn = (arg: string) => void;
 
 const NewColumnForm = () => {
      function hendleNewColumn(){
-          console.log('    click    ')
-          const miniFunc : CreateFunctionColumn = (arg) =>{
-               console.log(' 1 ', arg)
-               return arg;
-          }
-
+        
      }
     return ( 
        <form onSubmit={hendleNewColumn} className="max-w-xs">
