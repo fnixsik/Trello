@@ -17,7 +17,7 @@ const defoultcolumns = [
 ]
 
 const defoultCards = [
-    {id: '123', name: 'Task 1', index: 0, columnId: '1'},
+    {id: '1237', name: 'Task 1', index: 0, columnId: '1'},
     {id: '1234', name: 'Task 1.2', index: 0, columnId: '1'},
     {id: '1231', name: 'Task 2', index: 1, columnId: '2'},
     {id: '12312', name: 'Task 3', index: 2, columnId: '3'},

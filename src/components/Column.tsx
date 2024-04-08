@@ -18,10 +18,11 @@ const Columns = ({id, name, cards, setCards}: ColumnProps) => {
             sortedCards.forEach((sortedCard: CardType, newIndex:number)=>{
                 const foundCard = newCards.find(newCard => newCard.id === sortedCard.id);
                 if(foundCard){
-                    console.log('foundCard  ', foundCard)
                     foundCard.index = newIndex;
+                    foundCard.columnId = newColumnId;
                 }
             })
+            console.log(' 4 ', {newCards})
             return newCards;
         })
 
