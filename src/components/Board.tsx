@@ -29,11 +29,11 @@ const Board = () => {
     const [columns, setColumns] = useState(defoultcolumns);
 
 
-    return ( 
+    return (
         <div className="flex gap-4">
             {
                 columns.map(colum =>(
-                    <Column 
+                    <Column
                     {...colum}
                     setCards={setCards}
                     cards={cards
@@ -41,9 +41,7 @@ const Board = () => {
                         .filter(c=> c.columnId === colum.id)}/>
                 ))
             }
-            <NewColumnForm
-
-            />
+            <NewColumnForm/>
         </div>
      );
 }
