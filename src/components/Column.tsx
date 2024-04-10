@@ -22,7 +22,6 @@ const Columns = ({id, name, cards, setCards}: ColumnProps) => {
                     foundCard.columnId = newColumnId;
                 }
             })
-            console.log(' 4 ', {newCards})
             return newCards;
         })
 

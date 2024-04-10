@@ -11,16 +11,16 @@ export type CardType = {
 }
 
 const defoultcolumns = [
-    {id: '1', name: 'todo', index: 0},
-    {id: '2', name: 'in progress', index: 1},
-    {id: '3', name: 'done', index: 2},
+    {id: 'col1', name: 'todo', index: 0},
+    {id: 'col2', name: 'in progress', index: 1},
+    {id: 'col3', name: 'done', index: 2},
 ]
 
 const defoultCards = [
-    {id: '1237', name: 'Task 1', index: 0, columnId: '1'},
-    {id: '1234', name: 'Task 1.2', index: 0, columnId: '1'},
-    {id: '1231', name: 'Task 2', index: 1, columnId: '2'},
-    {id: '12312', name: 'Task 3', index: 2, columnId: '3'},
+    {id: 'qwe', name: 'Task 1', index: 1, columnId: 'col1'},
+    {id: 'qwr', name: 'Task 1.2', index: 0, columnId: 'col1'},
+    {id: 'qwt', name: 'Task 2', index: 1, columnId: 'col2'},
+    {id: 'qwy', name: 'Task 3', index: 2, columnId: 'col3'},
 ];
 
 const Board = () => {
@@ -36,7 +36,9 @@ const Board = () => {
                     <Column 
                     {...colum}
                     setCards={setCards}
-                    cards={cards.filter(c=> c.columnId === colum.id)}/>
+                    cards={cards
+                        .sort((a,b) => a.index - b.index)
+                        .filter(c=> c.columnId === colum.id)}/>
                 ))
             }
             <NewColumnForm
