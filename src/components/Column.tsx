@@ -40,7 +40,7 @@ const Columns = ({id, name, cards, setCards}: ColumnProps) => {
                 group="cards"
             >
                 {cards.map( card =>(
-                    <div className="border my-2 p-2 rounded-md">
+                    <div key={card.id} className="border my-2 p-2 rounded-md">
                         <span>
                             {card.name}
                         </span>

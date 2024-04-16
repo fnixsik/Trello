@@ -11,16 +11,16 @@ export type CardType = {
 }
 
 const defoultcolumns = [
-    {id: 'col1', name: 'todo', index: 0},
-    {id: 'col2', name: 'in progress', index: 1},
-    {id: 'col3', name: 'done', index: 2},
+    {id: '1', name: 'todo', index: 0},
+    {id: '2', name: 'in progress', index: 1},
+    {id: '3', name: 'done', index: 2},
 ]
 
 const defoultCards = [
-    {id: 'qwe', name: 'Task 1', index: 1, columnId: 'col1'},
-    {id: 'qwr', name: 'Task 1.2', index: 0, columnId: 'col1'},
-    {id: 'qwt', name: 'Task 2', index: 1, columnId: 'col2'},
-    {id: 'qwy', name: 'Task 3', index: 2, columnId: 'col3'},
+    {id: '01', name: 'Task 1', index: 1, columnId: '1'},
+    {id: '02', name: 'Task 1.2', index: 0, columnId: '1'},
+    {id: '03', name: 'Task 2', index: 1, columnId: '2'},
+    {id: '04', name: 'Task 3', index: 2, columnId: '3'},
 ];
 
 const Board = () => {
@@ -34,6 +34,7 @@ const Board = () => {
             {
                 columns.map(colum =>(
                     <Column
+                    key={colum.id}
                     {...colum}
                     setCards={setCards}
                     cards={cards
